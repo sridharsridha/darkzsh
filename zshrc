@@ -55,7 +55,6 @@ plugins=(
 	cheat
 	gitignore
 	zsh_reload
-	thefuck
 	safe-paste
 	fzf
 	history
