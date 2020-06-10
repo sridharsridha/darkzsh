@@ -1,8 +1,10 @@
 [[ -z "$PS1" ]] && return
 
+CHEAT_SHELL=$HOME/bin/cheat
+FZF_SHELL=$HOME/.zsh_modules/frameworks/fzf
+
 
 # Install cheat.sh
-CHEAT_SHELL=$HOME/bin/cheat
 if [[ ! -d "$CHEAT_SHELL" ]]; then
 	mkdir -p $CHEAT_SHELL
 	curl https://cht.sh/:cht.sh > $CHEAT_SHELL/cht.sh
@@ -11,7 +13,6 @@ fi
 export CHTSH_QUERY_OPTIONS="style=rrt"
 
 # FZF
-FZF_SHELL=$HOME/.zsh_modules/frameworks/fzf
 if [[ ! -d "$FZF_SHELL" ]]; then
 	echo "Installing fzf-shell."
 	git clone https://github.com/junegunn/fzf.git "$FZF_SHELL"
@@ -28,23 +29,6 @@ fi
 # Path to your oh-my-zsh installation.
 ZSH=${HOME}/.zsh_modules/frameworks/oh-my-zsh
 ZSH_CUSTOM=${HOME}/.zsh_modules/custom
-
-# Paths {{{
-###########
-generic_paths=(
-	$FZF_SHELL/bin
-	$CHEAT_SHELL
-)
-function workon_generic() {
-	PATH=$PATH:$(
-	IFS=:
-	echo "${generic_paths[*]}"
-)
-export PATH
-}
-# Enable default exports
-workon_generic
-#}}}
 
 
 ZSH_THEME="robbyrussell"
@@ -74,7 +58,16 @@ if [[ -e "${CUSTOM}" ]]; then
 	source $CUSTOM
 fi
 
+# Paths {{{
+###########
+generic_paths=(
+	$FZF_SHELL/bin
+	$CHEAT_SHELL
+)
+# Enable default exports
+export PATH=$PATH:$(IFS=:; echo "${generic_paths[*]}")
+#}}}
+
 # fzf support
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-fpath=(~/.zsh.d/ $fpath)
