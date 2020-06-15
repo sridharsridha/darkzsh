@@ -3,7 +3,6 @@
 CHEAT_SHELL=$HOME/bin/cheat
 FZF_SHELL=$HOME/.zsh_modules/frameworks/fzf
 
-
 # Install cheat.sh
 if [[ ! -d "$CHEAT_SHELL" ]]; then
 	mkdir -p $CHEAT_SHELL
@@ -30,15 +29,12 @@ fi
 ZSH=${HOME}/.zsh_modules/frameworks/oh-my-zsh
 ZSH_CUSTOM=${HOME}/.zsh_modules/custom
 
-
 ZSH_THEME="robbyrussell"
 DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
 	cheat
-	gitignore
-	zsh_reload
 	safe-paste
 	fzf
 	history
