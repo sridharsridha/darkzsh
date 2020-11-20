@@ -12,7 +12,7 @@ ORIGINAL_IFS=$IFS
 
 echo "Installing zsh..."
 
-git submodules update --init --recursive
+git submodule update --init --recursive
 
 # Install git config
 echo ln -s ${PWD}/zsh_modules ~/.zsh_modules
