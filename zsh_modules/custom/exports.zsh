@@ -2,8 +2,8 @@ export EDITOR=nvim
 export GIT_EDITOR=nvim
 export PAGER='more'
 export BLOCKSIZE=1k
-export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+# export LC_ALL=en_US.UTF-8
 
 # set options for less
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
