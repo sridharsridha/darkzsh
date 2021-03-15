@@ -34,14 +34,8 @@ DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
-	cheat
-	safe-paste
-	fzf
-	history
-	history-substring-search
 	zsh-completions
 	zsh-autosuggestions
-	fd
 )
 
 # zsh-syntax-highlighting needs to be at the end of all plugins
