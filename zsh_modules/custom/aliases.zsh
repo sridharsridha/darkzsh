@@ -7,5 +7,5 @@ alias mv='mv -iv'                            # Preferred 'mv' implementation
 alias gerp='grep'
 alias sl='ls'
 alias gentags='ctags -R .'
-alias hh='curl cht.sh/'
+alias grep='grep -n'
 

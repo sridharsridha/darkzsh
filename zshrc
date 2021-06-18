@@ -37,15 +37,9 @@ plugins=(
 	cheat
 	safe-paste
 	fzf
-	history
-	history-substring-search
 	zsh-completions
 	zsh-autosuggestions
-	fd
 )
-
-# zsh-syntax-highlighting needs to be at the end of all plugins
-plugins+=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 # Load the private bash config files
@@ -68,4 +62,4 @@ export PATH=$PATH:$(IFS=:; echo "${generic_paths[*]}")
 # fzf support
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
