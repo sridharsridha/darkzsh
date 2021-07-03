@@ -63,3 +63,7 @@ export PATH=$PATH:$(IFS=:; echo "${generic_paths[*]}")
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # eval "$(zoxide init zsh)"
+
+# Node installation
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
